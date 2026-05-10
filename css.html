@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NP - CSS</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=content_copy" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/copiarCodigo.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li class="desplegable">
+                    <a>Notas Prácticas</a>
+                    <ul class="submenu">
+                        <li><a href="html.html">HTML</a></li>
+                        <li><a href="css.html">CSS</a></li>
+                    </ul>
+                </li>
+                <li class="desplegable">
+                    <a>Clases</a>
+                    <ul class="submenu">
+                        <li><a href="horarios.html">Horarios</a></li>
+                    </ul>
+                </li>
+                <li class="desplegable">
+                    <a>Sitios</a>
+                    <ul class="submenu">
+                        <li><a target="_blank" href="https://sites.google.com/abc.gob.ar/sistemas24/inicio">Sitio Sistemas</a></li>
+                        <li><a target="_blank" href="https://isfdyt24.great-site.net">24 de Marzo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Introducción a CSS</h1>
+        </section>
+        <section>
+            <h2>¿Qué es CSS?</h2>
+            <article>
+                <p>
+                    CSS (Cascading Style Sheets) es un lenguaje de hojas de estilo utilizado para describir la
+                    presentación de un documento HTML. Permite controlar el diseño, los colores, las fuentes y otros
+                    aspectos visuales de una página web.
+                </p>
+                <p>
+                    Con CSS, puedes aplicar estilos a elementos HTML específicos o a grupos de elementos utilizando
+                    selectores. Puedes definir reglas de estilo que se aplican a diferentes partes de tu página web, lo
+                    que te permite crear diseños atractivos y personalizados.
+                </p>
+            </article>
+        </section>
+        <section>
+            <h2>Ejemplo de uso de CSS</h2>
+            <article>
+                <p>
+                    A continuación se muestra un ejemplo básico de cómo se puede usar CSS para dar estilo a una página
+                    web:
+                </p>
+                <div class="contenedorCodigo">
+                    <div class="tituloCopiarCodigo">
+                        <span class="textoCopiar">¡Probalo en tu editor copiando el código!</span>
+                        <button id="btnCopiar" onclick="copiarCodigo(this)">
+                            <span class="material-symbols-outlined">
+                                content_copy
+                            </span>
+                        </button>
+                    </div>
+                    <pre><code id="copiarCodigo">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Ejemplo de CSS&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        p {
+            line-height: 1.5;
+        }
+        .resaltado {
+            background-color: yellow;
+        }
+        .centrado {
+            text-align: center;
+        }
+        .rojo {
+            color: red;
+        }
+        .fondo-azul {
+            background-color: blue;
+            color: white;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1 class="centrado"&gt;¡Hola, CSS!&lt;/h1&gt;
+    &lt;p&gt;Este es un ejemplo de cómo usar CSS para dar estilo a una página web.&lt;/p&gt;
+    &lt;p class="resaltado"&gt;Este texto está resaltado.&lt;/p&gt;
+    &lt;p class="rojo"&gt;Este texto es rojo.&lt;/p&gt;
+    &lt;p class="fondo-azul"&gt;Este texto tiene fondo azul y texto blanco.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+                <p>
+                    En este ejemplo, se definen estilos para el cuerpo de la página, los encabezados, los párrafos y
+                    algunas clases específicas. Al aplicar estas reglas de estilo, se puede controlar la apariencia de
+                    la página web de manera efectiva.
+                </p>
+            </article>
+        </section>
+        <section>
+            <h2 id="TablasCSS">Estilos CSS para tablas</h2>
+            <article>
+                <p>
+                    Para darle estilo a una tabla, se pueden usar las propiedades CSS. A continuación se muestra
+                    un
+                    ejemplo de una tabla con estilos CSS:
+                </p>
+                <div class="contenedorCodigo">
+                    <div class="tituloCopiarCodigo">
+                        <span class="textoCopiar">¡Probalo en tu editor copiando el código!</span>
+                        <button id="btnCopiar" onclick="copiarCodigo(this)">
+                            <span class="material-symbols-outlined">
+                                content_copy
+                            </span>
+                        </button>
+                    </div>
+                    <pre><code id="copiarCodigo">&lt;table style="border: 1px solid black; border-collapse: collapse;"&gt;
+    &lt;tr&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Nombre&lt;/th&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Apellido&lt;/th&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Telefono&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Juan&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Navarro&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;00000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Milagros&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Romero&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;11111111&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+                <p>
+                    El resultado de la tabla anterior se muestra a continuación:
+                </p>
+                <table style="border: 1px solid black; border-collapse: collapse;">
+                    <tr>
+                        <th style="border: 1px solid black; padding: 5px;">Nombre</th>
+                        <th style="border: 1px solid black; padding: 5px;">Apellido</th>
+                        <th style="border: 1px solid black; padding: 5px;">Telefono</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;">Juan</td>
+                        <td style="border: 1px solid black; padding: 5px;">Navarro</td>
+                        <td style="border: 1px solid black; padding: 5px;">00000000</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;">Milagros</td>
+                        <td style="border: 1px solid black; padding: 5px;">Romero</td>
+                        <td style="border: 1px solid black; padding: 5px;">11111111</td>
+                    </tr>
+                </table>
+                <p>
+                    En la tabla anterior se muestra una tabla con estilos CSS. La propiedad <code>border</code>
+                    se
+                    usa
+                    para definir el borde de la tabla y la propiedad <code>padding</code> se usa para definir el
+                    espacio
+                    entre el contenido de la celda y el borde de la celda.
+                </p>
+                <h2>Ejemplo de tabla con colspan y rowspan</h2>
+                <p>
+                    Las propiedades <code>colspan</code> y <code>rowspan</code> se utilizan para hacer que una
+                    celda
+                    se extienda por varias columnas o filas.
+                </p>
+                <div class="contenedorCodigo">
+                    <div class="tituloCopiarCodigo">
+                        <span class="textoCopiar">¡Probalo en tu editor copiando el código!</span>
+                        <button id="btnCopiar" onclick="copiarCodigo(this)">
+                            <span class="material-symbols-outlined">
+                                content_copy
+                            </span>
+                        </button>
+                    </div>
+                    <pre><code id="copiarCodigo">&lt;table style="border: 1px solid black; border-collapse: collapse;"&gt;
+    &lt;tr&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Nombre&lt;/th&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Apellido&lt;/th&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Telefono&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Juan&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Navarro&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;00000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Milagros&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Romero&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;11111111&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;" colspan="2"&gt;Total de registros&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+                <p>
+                    El resultado de la tabla anterior se muestra a continuación:
+                </p>
+                <table style="border: 1px solid black; border-collapse: collapse;">
+                    <tr>
+                        <th style="border: 1px solid black; padding: 5px;">Nombre</th>
+                        <th style="border: 1px solid black; padding: 5px;">Apellido</th>
+                        <th style="border: 1px solid black; padding: 5px;">Telefono</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;">Juan</td>
+                        <td style="border: 1px solid black; padding: 5px;">Navarro</td>
+                        <td style="border: 1px solid black; padding: 5px;">00000000</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;">Milagros</td>
+                        <td style="border: 1px solid black; padding: 5px;">Romero</td>
+                        <td style="border: 1px solid black; padding: 5px;">11111111</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;" colspan="2">Total de registros</td>
+                        <td style="border: 1px solid black; padding: 5px;">2</td>
+                    </tr>
+                </table>
+                <p>
+                    En la tabla anterior se muestra una tabla con una celda que se extiende por dos columnas. La
+                    propiedad <code>colspan</code> se usa para hacer que la celda "Total de registros" se
+                    extienda por
+                    las dos
+                    primeras columnas.
+                </p>
+                <p>
+                    La propiedad <code>rowspan</code> se usa para hacer que una celda se extienda por varias
+                    filas.
+                    A continuación se muestra un ejemplo de una tabla con una celda que se extiende por varias
+                    filas:
+                </p>
+                <div class="contenedorCodigo">
+                    <div class="tituloCopiarCodigo">
+                        <span class="textoCopiar">¡Probalo en tu editor copiando el código!</span>
+                        <button id="btnCopiar" onclick="copiarCodigo(this)">
+                            <span class="material-symbols-outlined">
+                                content_copy
+                            </span>
+                        </button>
+                    </div>
+                    <pre><code id="copiarCodigo">&lt;table style="border: 1px solid black; border-collapse: collapse;"&gt;
+    &lt;tr&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Nombre&lt;/th&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Apellido&lt;/th&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Telefono&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Juan&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Navarro&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;00000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Milagros&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Romero&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;11111111&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;" rowspan="2" colspan="2"&gt;Total de registros&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+                <p>
+                    El resultado de la tabla anterior se muestra a continuación:
+                </p>
+                <table style="border: 1px solid black; border-collapse: collapse;">
+                    <tr>
+                        <th style="border: 1px solid black; padding: 5px;">Nombre</th>
+                        <th style="border: 1px solid black; padding: 5px;">Apellido</th>
+                        <th style="border: 1px solid black; padding: 5px;">Telefono</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;">Juan</td>
+                        <td style="border: 1px solid black; padding: 5px;">Navarro</td>
+                        <td style="border: 1px solid black; padding: 5px;">00000000</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;">Milagros</td>
+                        <td style="border: 1px solid black; padding: 5px;">Romero</td>
+                        <td style="border: 1px solid black; padding: 5px;">11111111</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;" rowspan="2" colspan="2">Total de
+                            registros
+                        </td>
+                        <td style="border: 1px solid black; padding: 5px;">2</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;">&nbsp;</td>
+                    </tr>
+                </table>
+                <p>
+                    En la tabla anterior se muestra una tabla con una celda que se extiende por dos filas. La
+                    propiedad <code>rowspan</code> se usa para hacer que la celda "Total de registros" se
+                    extienda por
+                    las dos
+                    primeras filas.
+                </p>
+            </article>
+        </section>
+        <section>
+            <h2>Propiedad hover</h2>
+            <article>
+                <p>
+                    La propiedad <code>hover</code> se usa para aplicar estilos a un elemento cuando el usuario
+                    pasa el mouse sobre él. A continuación se muestra un ejemplo de cómo usar la propiedad
+                    <code>hover</code> para cambiar el color de fondo de una celda de una tabla cuando el usuario
+                    pasa el mouse sobre ella:
+                </p>
+                <div class="contenedorCodigo">
+                    <div class="tituloCopiarCodigo">
+                        <span class="textoCopiar">¡Probalo en tu editor copiando el código!</span>
+                        <button id="btnCopiar" onclick="copiarCodigo(this)">
+                            <span class="material-symbols-outlined">
+                                content_copy
+                            </span>
+                        </button>
+                    </div>
+                    <pre><code id="copiarCodigo">&lt;table style="border: 1px solid black; border-collapse: collapse;"&gt;
+    &lt;tr&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Nombre&lt;/th&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Apellido&lt;/th&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Telefono&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Juan&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Navarro&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;00000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Milagros&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Romero&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;11111111&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;style&gt;
+    td:hover {
+        background-color: yellow;
+    }
+&lt;/style&gt;</code></pre>
+                </div>
+                <p>
+                    El resultado de la tabla anterior se muestra a continuación:
+                </p>
+                <table class="css-tabla-hover" style="border: 1px solid black; border-collapse: collapse;">
+                    <tr>
+                        <th style="border: 1px solid black; padding: 5px;">Nombre</th>
+                        <th style="border: 1px solid black; padding: 5px;">Apellido</th>
+                        <th style="border: 1px solid black; padding: 5px;">Telefono</th>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;">Juan</td>
+                        <td style="border: 1px solid black; padding: 5px;">Navarro</td>
+                        <td style="border: 1px solid black; padding: 5px;">00000000</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;">Milagros</td>
+                        <td style="border: 1px solid black; padding: 5px;">Romero</td>
+                        <td style="border: 1px solid black; padding: 5px;">11111111</td>
+                    </tr>
+                </table>
+                <p>
+                    En el ejemplo anterior, se define un estilo para la propiedad <code>hover</code> que cambia el color
+                    de fondo de una celda a amarillo cuando el usuario pasa el mouse sobre ella. Esto permite resaltar
+                    la celda que el usuario está interactuando, mejorando la experiencia de usuario al navegar por la
+                    tabla.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Propiedad empty</h2>
+            <article>
+            <p>
+                La propiedad <code>empty</code> se usa para aplicar estilos a un elemento que no tiene contenido. A
+                continuación se muestra un ejemplo de cómo usar la propiedad <code>empty</code> para cambiar el
+                color de fondo de una celda de una tabla cuando la celda está vacía:
+            </p>
+            <div class="contenedorCodigo">
+                <div class="tituloCopiarCodigo">
+                    <span class="textoCopiar">¡Probalo en tu editor copiando el código!</span>
+                    <button id="btnCopiar" onclick="copiarCodigo(this)">
+                        <span class="material-symbols-outlined">
+                            content_copy
+                        </span>
+                    </button>
+                </div>
+<pre><code id="copiarCodigo">&lt;table style="border: 1px solid black; border-collapse: collapse;"&gt;
+    &lt;tr&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Nombre&lt;/th&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Apellido&lt;/th&gt;
+        &lt;th style="border: 1px solid black; padding: 5px;"&gt;Telefono&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Juan&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Navarro&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;00000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Milagros&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;Romero&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;11111111&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;&lt;/td&gt;
+        &lt;td style="border: 1px solid black; padding: 5px;"&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;style&gt;
+    td:empty {
+        background-color: red;
+    }
+&lt;/style&gt;</code></pre>
+            </div>
+            <p>
+                El resultado de la tabla anterior se muestra a continuación:
+            </p>
+            <table class="css-tabla-empty" style="border: 1px solid black; border-collapse: collapse;">
+                <tr>
+                    <th style="border: 1px solid black; padding: 5px;">Nombre</th>
+                    <th style="border: 1px solid black; padding: 5px;">Apellido</th>
+                    <th style="border: 1px solid black; padding: 5px;">Telefono</th>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding: 5px;">Juan</td>
+                    <td style="border: 1px solid black; padding: 5px;">Navarro</td>
+                    <td style="border: 1px solid black; padding: 5px;">00000000</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding: 5px;">Milagros</td>
+                    <td style="border: 1px solid black; padding: 5px;">Romero</td>
+                    <td style="border: 1px solid black; padding: 5px;">11111111</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid black; padding: 5px;"></td>
+                    <td style="border: 1px solid black; padding: 5px;"></td>
+                    <td style="border: 1px solid black; padding: 5px;"></td>
+                </tr>
+            </table>
+            <p>
+                En el ejemplo anterior, se define un estilo para la propiedad <code>empty</code> que cambia el color de fondo de una celda a gris claro cuando la celda no tiene contenido. Esto permite identificar fácilmente las celdas vacías en la tabla.
+            </p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

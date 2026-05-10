@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NP - HTML</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=content_copy" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/copiarCodigo.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="/img/img.portada/notas-icono.svg">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li class="desplegable">
+                    <a>Notas Prácticas</a>
+                    <ul class="submenu">
+                        <li><a href="html.html">HTML</a></li>
+                        <li><a href="css.html">CSS</a></li>
+                    </ul>
+                </li>
+                <li class="desplegable">
+                    <a>Clases</a>
+                    <ul class="submenu">
+                        <li><a href="horarios.html">Horarios</a></li>
+                    </ul>
+                </li>
+                <li class="desplegable">
+                    <a>Sitios</a>
+                    <ul class="submenu">
+                        <li><a target="_blank" href="https://sites.google.com/abc.gob.ar/sistemas24/inicio">Sitio
+                                Sistemas</a></li>
+                        <li><a target="_blank" href="https://isfdyt24.great-site.net">24 de Marzo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="HTML">
+        <section>
+            <h1>Introducción a HTML</h1>
+        </section>
+        <section>
+            <h2>¿Qué es HTML?</h2>
+            <article>
+                <p>
+                    <strong>HyperText Markup Language (lenguaje de marcado de hipertexto)</strong> ó
+                    <strong>HTML</strong> sirve para modelar la estructura de una página web. Los elementos de HTML
+                    indican al navegador web cómo mostrar el contenido. Los elementos de HTML se definen con etiquetas.
+                    Los navegadores no muestran las etiquetas, sino que las usan para interpretar el contenido.
+                </p>
+                <p>
+                    HTML puede ser codificado con cualquier editor de texto, para que el navegador lo reconozca, el
+                    archivo debe tener la extensión “.html”.
+                </p>
+                <p>
+                    Algunos editores que nos ayudaran a codificar en HTML son SublimeText y VisualStudioCode.
+                    Estos editores ponen automáticamente color a nuestro código para guiarnos y muchas veces nos darán
+                    sugerencias al apretar una tecla o harán el cierre de etiquetas automáticamente. Para elegir uno de
+                    ellos es recomendable haberlos probado todos, incluyendo el block de notas.
+                </p>
+                <p>
+                    <a target="_blank" href="https://code.visualstudio.com/#alt-downloads">Para descargar Visual Studio
+                        Code puedo hacerlo desde acá</a>
+                </p>
+                <p>
+                    Si te interesa ver una breve historia de HTML podés ver este <a
+                        href="https://www.youtube.com/watch?time_continue=118&v=B5VjL2f1IQg">video</a>
+                </p>
+                <p>
+                    En internet podrás encontrar millones de tutoriales de HTML que explican desde cero!!
+                </p>
+            </article>
+        </section>
+
+        <section id="HTMLVSCODE">
+            <h2>HTML en VsCode</h2>
+            <article>
+                Visual Studio Code nos crea una plantilla básica de forma automática. Para acceder debemos crear nuestro
+                archivo con
+                extensión html y una vez dentro de él tenemos dos opciones:
+                - Escribimos un signo de admiración de cierre (!) y presionamos la tecla tab.
+                - Escribimos html:5 y presionamos la tecla tab
+                Ejemplo simple de HTML:
+                <img src="/img/img.html/Ejemplo1.png" alt="Ejemplo de html en VSCODE">
+            </article>
+        </section>
+
+        <section id="Etiquetas">
+            <h2 id="Etiquetas">Etiquetas HTML</h2>
+            <article>
+                <p>
+                    Las etiquetas HTML generalmente se usan en pares una indica la aperturda y la otra el cierre. La
+                    etiqueta de apertura tiene el siguiente formato:
+                <pre><code>&lt;nombre_etiqueta_apertura&gt; &lt;\nombre_etiqueta_cierre&gt;</code></pre>
+
+                El nombre de la etiqueta de cierre es igual al de la etiqueta de apertura pero con una barra (/)
+                delante.
+                Por ejemplo, para escribir un párrafo se usa la etiqueta:
+                <pre><code>&lt;p&gt;</code></pre> y para cerrarlo se usa:
+                <pre><code>&lt;/p&gt;</code></pre>
+
+                Algunas etiquetas no necesitan ser cerradas, como por ejemplo:
+                <pre><code>&lt;img&gt;</code></pre> que se usa para
+                insertar imágenes.
+                </p>
+                <p>
+                    La finalidad de un navegador web es leer las etiquetas HTML. El navegador no mostrará estas
+                    etiquetas;
+                    sino
+                    que las usará para determinar cómo tiene que mostrar el contenido. Puede haber diferencias entre los
+                    diferentes navegadores, aun así, la mayoría de los navegadores modernos siguen los mismos estándares
+                    de
+                    HTML, por lo que el contenido se mostrará de manera similar en todos ellos.
+                </p>
+            </article>
+        </section>
+
+        <section id="CaracteresEspeciales">
+            <h2 id="CaracteresEspeciales">Caracteres especiales en HTML</h2>
+            <article>
+                <p>
+                    Para escribir código HTML dentro de un documento HTML, es necesario usar las entidades HTML. Las
+                    entidades HTML son secuencias de caracteres que representan caracteres especiales. Por ejemplo, para
+                    escribir el símbolo menor que (<) se usa la entidad <code>&amp;lt;</code>, para escribir el símbolo
+                        mayor que (>) se usa la entidad <code>&amp;gt;</code> y para escribir el símbolo ampersand (&)
+                        se
+                        usa la entidad <code>&amp;amp;</code>.
+                </p>
+            </article>
+        </section>
+
+        <section id="Tablas">
+            <h2 id="Tablas">Tablas en HTML</h2>
+            <article>
+                <p>
+                    Las tablas en HTML se crean con la etiqueta <code>&lt;table&gt;</code>. Cada fila de la tabla se
+                    define
+                    con la etiqueta <code>&lt;tr&gt;</code>. Las celdas de la tabla se definen con las etiquetas
+                    <code>&lt;td&gt;</code> para las celdas normales y <code>&lt;th&gt;</code> para las celdas de
+                    encabezado. A continuación se muestra un ejemplo de una tabla en HTML:
+                </p>
+                <div class="contenedorCodigo">
+                    <div class="tituloCopiarCodigo">
+                        <span class="textoCopiar">¡Probalo en tu editor copiando el código!</span>
+                        <button id="btnCopiar" onclick="copiarCodigo(this)">
+                            <span class="material-symbols-outlined">
+                                content_copy
+                            </span>
+                        </button>
+                    </div>
+                    <pre><code id="copiarCodigo">&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nombre&lt;/th&gt;
+        &lt;th&gt;Apellido&lt;/th&gt;
+        &lt;th&gt;Telefono&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;Juan&lt;/td&gt;
+        &lt;td&gt;Navarro&lt;/td&gt;
+        &lt;td&gt;00000000&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+                <p>
+                    El resultado de la tabla anterior se muestra a continuación:
+                </p>
+                <div class="sin-estilo">
+                    <table class="sin-estilo">
+                        <tr>
+                            <th>
+                                Nombre
+                            </th>
+                            <th>
+                                Apellido
+                            </th>
+                            <th>Telefono</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Juan
+                            </td>
+                            <td>Navarro</td>
+                            <td>00000000</td>
+                        </tr>
+                        <tr>
+                            <td>Milagros</td>
+                            <td>Romero</td>
+                            <td>11111111</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>
+                    En la tabla anterior se muestra una tabla con dos filas y tres columnas. La primera fila es
+                    la fila
+                    de
+                    encabezado, que se define con la etiqueta <code>&lt;th&gt;</code>. La segunda fila es la
+                    fila de
+                    datos,
+                    que se define con la etiqueta <code>&lt;td&gt;</code>.
+                </p>
+
+                <p>Para una mejor semántica de tablas, se pueden usar las etiquetas <code>&lt;thead&gt;</code>,
+                    <code>&lt;tbody&gt;</code> y <code>&lt;tfoot&gt;</code>. La etiqueta
+                    <code>&lt;thead&gt;</code> se
+                    usa
+                    para definir la sección de encabezado de la tabla, la etiqueta <code>&lt;tbody&gt;</code> se
+                    usa
+                    para
+                    definir la sección de cuerpo de la tabla y la etiqueta <code>&lt;tfoot&gt;</code> se usa
+                    para
+                    definir la
+                    sección de pie de la tabla. A continuación se muestra un ejemplo de una tabla con estas
+                    etiquetas:
+                </p>
+                <div class="contenedorCodigo">
+                    <div class="tituloCopiarCodigo">
+                        <span class="textoCopiar">¡Probalo en tu editor copiando el código!</span>
+                        <button id="btnCopiar" onclick="copiarCodigo(this)">
+                            <span class="material-symbols-outlined">
+                                content_copy
+                            </span>
+                        </button>
+                    </div>
+                    <pre><code id="copiarCodigo">&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;  
+            &lt;th&gt;Nombre&lt;/th&gt;
+            &lt;th&gt;Apellido&lt;/th&gt;
+            &lt;th&gt;Telefono&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Juan&lt;/td&gt;
+            &lt;td&gt;Navarro&lt;/td&gt;
+            &lt;td&gt;00000000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Milagros&lt;/td&gt;
+            &lt;td&gt;Romero&lt;/td&gt;
+            &lt;td&gt;11111111&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Total de registros&lt;/td&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+                <p>
+                    El resultado de la tabla anterior se muestra a continuación:
+                </p>
+                <div class="sin-estilo">
+                    <table class="sin-estilo">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Telefono</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Juan</td>
+                                <td>Navarro</td>
+                                <td>00000000</td>
+                            </tr>
+                            <tr>
+                                <td>Milagros</td>
+                                <td>Romero</td>
+                                <td>11111111</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Total de registros</td>
+                                <td>&nbsp;</td>
+                                <td>2</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <p>
+                    En la tabla anterior se muestra una tabla con dos filas de datos y una fila de pie. La
+                    primera
+                    fila
+                    es la fila de encabezado, que se define con la etiqueta <code>&lt;th&gt;</code>. La segunda
+                    y
+                    tercera fila son filas de datos, que se definen con la etiqueta <code>&lt;td&gt;</code>. La
+                    cuarta
+                    fila es la fila de pie, que se define con la etiqueta <code>&lt;td&gt;</code>.
+                </p>
+
+                <p>Se utiliza <code>&amp;nbsp;</code> para dejar un espacio en blanco. Sin embargo, esta técnica no es
+                    recomendable para el diseño responsivo o para reemplazar un elemento vacío.</p>
+
+                <p>
+                    Para darle estilo a las tablas se puede usar CSS. Podes ver mas en la sección de CSS haciendo click
+                    <a href="css.html#TablasCSS">aquí</a>.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

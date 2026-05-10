@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    /* --color-fondo: #c8d2fc; */
+    --color-fondo: #e2e8fd;
+    --color-primario: #0b1c41;
+    --color-secundario: #3c4df6;
+    --color-texto: #31354b;
+    --color-hover: #91a6f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 500 1rem 'Montserrat', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+h1 {
+    color: var(--color-primario);
+}
+
+h2 {
+    color: var(--color-secundario);
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    margin: 20px 30px 20px 30px;
+    background-color: #0b1c41;
+    padding: .5rem;
+    border-radius: 35px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+nav a:hover {
+    color: var(--color-hover);
+}
+
+/* Estilos para el desplegable */
+
+.submenu {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-primario);
+    min-width: 170px;
+    flex-direction: column;
+    border-radius: 0px 0px 35px 35px;
+}
+
+.desplegable:hover .submenu {
+    display: flex !important;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+section {
+    width: 80vw;
+}
+
+article {
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.contenedorCodigo {
+    background-color: var(--color-primario);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tituloCopiarCodigo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    background-color: var(--color-primario);
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+#btnCopiar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#btnCopiar:hover {
+    color: var(--color-hover);
+}
+
+pre {
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+    background: transparent
+}
+
+code {
+    font-family: 'Roboto Mono', Courier, monospace;
+    font-weight: 400;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.sin-estilo,
+.sin-estilo th,
+.sin-estilo td {
+    all: revert;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    background-color: burlywood;
+}
+
+td:empty {
+    background-color: rgb(211, 211, 211);
+}
+
+td:empty:hover {
+    background-color: blue;
+}
+
+.vesp {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.materia {
+    font-weight: bold;
+}
+
+.analista1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.analista1 .texto {
+    flex: 1;
+}
+
+.analista1 img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.portada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+img{
+    width: 100%;
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 6px rgba(120, 120, 120, 0.7));
+}
+
+
+footer {
+    margin-top: 20px;
+    padding: 1rem;
+    background-color: #16161e;
+    color: whitesmoke;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .analista1 {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Estilos de la página CSS*/
+
+.css-tabla-hover tr td:hover {
+    background-color: yellow;
+}
+
+.css-tabla-empty tr td:empty {
+    background-color: red;
+}

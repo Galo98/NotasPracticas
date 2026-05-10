@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NP - Horarios</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        section {
+            width: 80vw;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+
+        th {
+            background-color: burlywood;
+        }
+
+        td:empty {
+            background-color: rgb(211, 211, 211);
+        }
+
+        td:empty:hover {
+            background-color: blue;
+        }
+
+        .vesp {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+        }
+
+        .materia {
+            font-weight: bold;
+        }
+
+        .analista1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .analista1 .texto {
+            flex: 1;
+        }
+
+        .analista1 img {
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .analista1 {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.google.com">Ir a un buscador</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.argentina.gob.ar/">Ir a página de Argentina</a>
+                </li>
+                <li><a href="html.html#HTML">HTML</a></li>
+                                <li><a href="css.html">CSS</a></li>
+                <li><a href="horarios.html">Horarios</a></li>
+                <li><a href="index.html#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Tecnicatura en análisis de sistemas</h1>
+            <article>
+                <table>
+                    <tr>
+                        <th colspan="6">Horarios 2026</th>
+                        <th>1°B</th>
+                    </tr>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miercoes</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th class="vesp" rowspan="7">Vespertino</th>
+                        <tr />
+                    <tr>
+                        <td>1ª <br> 17,40 a 18,30</td>
+                        <td>
+                            <p class="materia">ÁLGEBRA</p> <br> Romero Gabriel <br> MARTÍNEZ Miguel (Sup)
+                        </td>
+                        <td>CIENCIA, TECNOLOGÍA y SOCIEDAD <br> Prof. ADAN Claudio</td>
+                        <td>ALGORITMOS Y ESTRUCTURAS DE DATOS I <br> Prof. ROLDAN Graciana</td>
+                        <td>SISTEMAS Y ORGANIZACIONES <br> Prof. DE ANDREIS Alejandro</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2ª <br> 18,30 a 19,20</td>
+                        <td>ÁLGEBRA <br> Romero Gabriel <br> MARTÍNEZ Miguel (Sup)</td>
+                        <td>CIENCIA, TECNOLOGÍA y SOCIEDAD <br> Prof. ADAN Claudio</td>
+                        <td>ALGORITMOS Y ESTRUCTURAS DE DATOS I <br> Prof. ROLDAN Graciana</td>
+                        <td>SISTEMAS Y ORGANIZACIONES <br> Prof. DE ANDREIS Alejandro</td>
+                        <td>ANÁLISIS MATEMÁTICO I <br> Prof. OSAMENDIA Juan</td>
+                    </tr>
+                    <tr>
+                        <td>3ª <br> 19,25 a 20,15</td>
+                        <td>ARQUITECTURA DE COMPUTADORES <br> Prof. ROLDAN Graciana</td>
+                        <td></td>
+                        <td>ALGORITMOS Y ESTRUCTURAS DE DATOS I <br> Prof. ROLDAN Graciana</td>
+                        <td>INGLÉS I <br> Prof. PEREZ Alejandra</td>
+                        <td>ANÁLISIS MATEMÁTICO I <br> Prof. OSAMENDIA Juan</td>
+                    </tr>
+                    <tr>
+                        <td>4ª <br> 20,15 a 21,05</td>
+                        <td>ARQUITECTURA DE COMPUTADORES <br> Prof. ROLDAN Graciana</td>
+                        <td></td>
+                        <td>PRÁCTICAS PROFESIONALIZANTES I <br> Prof. GIAIMO Paula <br> GRUPO A</td>
+                        <td>INGLÉS I <br> Prof. PEREZ Alejandra</td>
+                        <td>PRÁCTICAS PROFESIONALIZANTES I <br> OLGUIN FERNANDEZ, Galo (Sup) <br> GRUPO B</td>
+                    </tr>
+                    <tr>
+                        <td>5ª <br> 21,10 a 22,00</td>
+                        <td>ALGORITMOS Y ESTRUCTURAS DE DATOS I <br> Prof. ROLDAN Graciana</td>
+                        <td></td>
+                        <td>PRÁCTICAS PROFESIONALIZANTES I <br> Prof. GIAIMO Paula <br> GRUPO A</td>
+                        <td></td>
+                        <td>PRÁCTICAS PROFESIONALIZANTES I <br> OLGUIN FERNANDEZ, Galo (Sup) <br> GRUPO B</td>
+                    </tr>
+                    <tr>
+                        <th colspan="7">(*) PRÁCTICAS PROFESIONALIZANTES I: SON DOS MÓDULOS SEMANALES. SE CURSA EN GRUPO
+                            A O
+                            GRUPO B</th>
+                    </tr>
+                </table>
+            </article>
+        </section>
+
+        <section>
+            <h2>¿Qué es un analista de sistemas?</h2>
+            <article class="analista1">
+                <div class="texto">
+                    <p>
+                        Es el profesional encargado de relevar, interpretar, analizar y documentar las necesidades de un
+                        cliente
+                        o usuario para luego traducirlas en soluciones informáticas funcionales.
+                    </p>
+                    <p>
+                        Basicamente:
+                    </p>
+                    <ul>
+                        <li>Traduce las necesidades en soluciones.</li>
+                        <li>Es el puente entre el usuario y el equipo técnico.</li>
+                    </ul>
+                </div>
+                <aside><img src="img/analista1.jpg" alt="Persona gestionando"></aside>
+
+            </article>
+        </section>
+
+        <section>
+            <h2>Habilidades del analista de sistemas</h2>
+            <article>
+                <table>
+                    <tr>
+                        <th>Técnicas</th>
+                        <th>Interpersonales</th>
+                    </tr>
+                    <tr>
+                        <td>Conocimientos básicos de programación</td>
+                        <td>Escucha activa</td>
+                    </tr>
+                    <tr>
+                        <td>Diseño de bases de datos y procesos</td>
+                        <td>Comunicación efectiva</td>
+                    </tr>
+                    <tr>
+                        <td>Modelado de sistemas</td>
+                        <td>Trabajo en equipo</td>
+                    </tr>
+                    <tr>
+                        <td>Conocimiento de metodologías agiles</td>
+                        <td>Capacidad de análisis</td>
+                    </tr>
+                    <tr>
+                        <td>Documetnación técnica y funcional</td>
+                        <td>Resolución de problemas</td>
+                    </tr>
+                </table>
+                <p>No tiene que ser un experto en programación, pero sí debe comprender cómo funciona un sistema
+                    informático.</p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
