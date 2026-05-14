@@ -24,6 +24,12 @@ body {
     color: var(--color-texto);
 }
 
+h1,
+h2,
+h3 {
+    scroll-margin-top: 90px;
+}
+
 h1 {
     color: var(--color-primario);
 }
@@ -32,29 +38,36 @@ h2 {
     color: var(--color-secundario);
 }
 
-header {
-    width: 100%;
+h3 {
+    color: var(--color-secundario);
 }
 
-nav {
+header {
+    width: 100%;
+    position: sticky;
+    top: 3px;
+    z-index: 101;
+}
+
+.navGeneral {
     margin: 20px 30px 20px 30px;
     background-color: #0b1c41;
     padding: .5rem;
     border-radius: 35px;
 }
 
-nav ul {
+.navGeneral ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav li {
+.navGeneral li {
     position: relative;
 }
 
-nav a {
+.navGeneral a {
     display: block;
     text-decoration: none;
     padding: 15px 20px;
@@ -62,7 +75,7 @@ nav a {
     color: whitesmoke;
 }
 
-nav a:hover {
+.navGeneral a:hover {
     color: var(--color-hover);
 }
 
@@ -71,12 +84,13 @@ nav a:hover {
 .submenu {
     display: none !important;
     position: absolute;
+    z-index: 101;
     top: 100%;
     left: 0;
     background-color: var(--color-primario);
     min-width: 170px;
     flex-direction: column;
-    border-radius: 0px 0px 35px 35px;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .desplegable:hover .submenu {
@@ -91,15 +105,57 @@ html {
     scroll-behavior: smooth;
 }
 
-main {
+.mainGeneral {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
+.mainNotas {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+}
+
 section {
-    width: 80vw;
+    width: 70vw;
+}
+
+/* Estilos para el menú lateral */
+
+.menuLateral {
+    position: sticky;
+    top: 90px;
+    z-index: 100;
+    width: 20vw;
+    background-color: transparent;
+    margin: 0 0 0 60px;
+}
+
+.menuLateral ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.menuLateral li { 
+    width: 100%;
+}
+
+.menuLateral a {
+    color: var(--color-primario);
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    text-shadow: 1px 1px 2px rgba(120, 120, 120, 0.7);
+}
+
+.menuLateral a:hover {
+    color: var(--color-hover);
 }
 
 article {
@@ -243,10 +299,72 @@ footer p {
 }
 
 @media (max-width: 768px) {
+
+    /* Estilos Menu */
+
+    header {
+        position: static;
+    }
+
+    .navGeneral {
+        margin: 0;
+        padding: .5rem;
+        border-radius: 0;
+    }
+
+    .navGeneral ul {
+        flex-direction: column;
+    }
+
+    .navGeneral li {
+        position: relative;
+    }
+
+    .navGeneral a {
+        display: block;
+        text-decoration: none;
+        padding: 15px 20px;
+        font-weight: bold;
+        color: whitesmoke;
+    }
+
+    /* Estilos para el desplegable */
+
+    .submenu {
+        all: unset;
+    }
+
+    .desplegable:hover .submenu {
+        all: unset;
+    }
+
+    .submenu li {
+        all: unset;
+    }
+
     .analista1 {
         flex-direction: column;
         text-align: center;
     }
+
+    .mainNotas {
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    section {
+        width: 80vw;
+    }
+
+    /* Estilos para el menu lateral */
+
+    .menuLateral {
+        display: none;
+    }
+
 }
 
 /* Estilos de la página CSS*/

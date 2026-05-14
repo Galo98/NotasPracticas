@@ -1,0 +1,20 @@
+#!/bin/bash
+HOST='host'
+USER='usuario'
+PASS='clave'
+
+# Eliminamos la -f y dejamos solo lftp
+lftp <<EOF
+open $HOST
+user $USER $PASS
+# Si tu web está en la misma carpeta que el script, usa . en lugar de ./carpeta_de_tu_web
+mirror -R ../ /htdocs
+bye
+EOF
+
+if [ $? -eq 0 ]; then
+    echo "¡Subida finalizada con éxito!"
+else
+    echo "Hubo un error en la subida."
+fi
+
