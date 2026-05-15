@@ -276,15 +276,46 @@ td:empty:hover {
     gap: 1rem;
 }
 
-.imgPortada {
-    width: 100%;
-}
-
 img {
     border-radius: 10px;
     filter: drop-shadow(0px 0px 6px rgba(120, 120, 120, 0.7));
 }
 
+.imgPortada {
+    width: 100%;
+}
+
+/* Sección de GIT */
+
+/* .contenedorGit{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.contenedorGit div{
+    flex:2;
+}
+
+.contenedorGit img {
+    flex: 1;
+} */
+
+.git-img{
+    display: flex;
+    justify-content: center;
+}
+
+.git-intro{
+    justify-content: space-around;
+}
+
+.git-linus {
+    width: 300px;
+}
+.git-desaColab, .git-instalar {
+    width: 600px;
+}
 
 footer {
     margin-top: 20px;
@@ -363,6 +394,18 @@ footer p {
 
     .menuLateral {
         display: none;
+    }
+
+    /* Estilos Sección Git */
+
+    .git-img{
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .git-desaColab, .git-instalar {
+        width: 300px;
     }
 
 }

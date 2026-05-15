@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NP - CSS</title>
+    <link rel="icon" type="image/x-icon" href="/img/img.portada/notas-icono.svg">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=content_copy" />
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="js/copiarCodigo.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navGeneral">
+            <ul>
+                <li>
+                    <a href="/index.html">Inicio</a>
+                </li>
+                <li class="desplegable">
+                    <a>Notas Prácticas</a>
+                    <ul class="submenu">
+                        <li><a href="/content/notas/html.html">HTML</a></li>
+                        <li><a href="/content/notas/css.html">CSS</a></li>
+                        <li><a href="/content/notas/git.html">Git</a></li>
+                    </ul>
+                </li>
+                <li class="desplegable">
+                    <a>Clases</a>
+                    <ul class="submenu">
+                        <li><a href="/content/clases/horarios.html">Horarios</a></li>
+                    </ul>
+                </li>
+                <li class="desplegable">
+                    <a>Sitios</a>
+                    <ul class="submenu">
+                        <li><a target="_blank" href="https://sites.google.com/abc.gob.ar/sistemas24/inicio">Sitio
+                                Sistemas</a></li>
+                        <li><a target="_blank" href="https://isfdyt24.great-site.net">24 de Marzo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="mainNotas">
+        <aside>
+            <nav class="menuLateral">
+                <ul>
+                    <li><a href="#Git">Git</a></li>
+                    <li><a href="#desaColab">Desarrollo colaborativo</a></li>
+                    <li><a href="#descargaGit">Descarga de Git</a></li>
+                    <li><a href="#comandosGit">Comandos de Git</a></li>
+                    <li><a href="#configuracion">Configuración</a></li>
+                    <li><a href="#versionar">Control de versiones</a></li>
+                    <li><a href="#ramas">Branches / Ramas</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="contenedorPrincipal">
+            <section>
+                <h1 id="Git">¿Qué es y para qué sirve Git?</h1>
+                <article class="contenedorGit">
+                    <p>
+                        <strong>Git es un software de control de versiones diseñado por Linus Torvalds.</strong> Fue diseñado para que el mantenimiento de versiones de aplicaciones sea eficiente, rápido y confiable.
+                    </p>
+
+                    <div class="git-img git-intro">
+                        <img class="git-linus" src="/img/img.git/gitLogo.svg" alt="Logo de Git">
+                        <img class="git-linus" src="/img/img.git/linusTorvalds.webp" alt="Linus Torvalds">
+                    </div>
+
+                    <p>
+                        Su propósito es llevar registro de los cambios en archivos y coordinar el trabajo que varias personas pueden hacer sobre esos archivos. Es especialmente útil para proyectos de desarrollo de software, pero también se puede utilizar para cualquier tipo de archivo. Git permite a los desarrolladores colaborar, mantener un historial de cambios y revertir a versiones anteriores si es necesario.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h2 class="desaColab">Desarrollo colaborativo</h2>
+                <article>
+                    <p>
+                        El desarrollo colaborativo es un modelo de desarrollo basado en la <strong>disponibilidad pública del código y la comunicación vía internet</strong>. Este modelo se hizo conocido gracias a su utilización para el desarrollo del kernel de Linux en 1991, pero se ha extendido a una amplia variedad de proyectos de software y otros tipos de proyectos creativos.
+                    </p>
+                    <div class="git-img"><img class="git-desaColab" src="/img/img.git/desarrolloColaborativo.webp" alt="Ilustración de desarrollo colaborativo"></div>
+                    <p>
+                        Podríamos decir que en el desarrollo colaborativo Git proporciona una plataforma para que un gran número de desarrolladores puedan trabajar en conjunto de una manera más fácil, menos propensa a errores y rápida de implementar. Git permite a los desarrolladores compartir su código, colaborar en proyectos y mantener un historial de cambios, lo que facilita la gestión de proyectos de desarrollo de software a gran escala.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h2 id="descargaGit">¡Descargá Git!</h2>
+                <article>
+                    <p>
+                        Para descargar Git, podés ir al sitio web oficial de Git en <a href="https://git-scm.com/" target="_blank">git-scm.com</a> y hacer click en el botón de <em>Install</em> en naranja, donde recomendará la versión adecuada para tu sistema operativo.
+                    </p>
+                    <div class="git-img">
+                        <img class="git-instalar" src="/img/img.git/instalarGit.webp" alt="Imagen de instalación de Git"></div>
+                </article>
+            </section>
+
+            <section>
+                <h2 id="comandosGit">Comandos</h2>
+                <article>
+                    <h2 id="configuracion">Configuración</h2>
+                    <p><pre><code>git --version</code></pre>
+                        Este comando se utiliza para verificar la versión de Git instalada en tu sistema. Al ejecutarlo, Git mostrará la versión actual que tienes instalada, lo que es útil para asegurarte de que estás utilizando una versión compatible con tus necesidades o para verificar que la instalación se realizó correctamente.
+                    </p>
+                    <p><pre><code>git config --global --list</code></pre>
+                        Este comando se utiliza para mostrar la configuración global de Git. Al ejecutarlo, Git mostrará una lista de todas las configuraciones globales que has establecido, incluyendo tu nombre de usuario, correo electrónico y otras opciones de configuración.
+                    </p>
+                    <p><pre><code>git config --global user.name "Tu Nombre"</code></pre>
+                        Este comando se utiliza para configurar el nombre de usuario global en Git. Al ejecutarlo, Git asignará el nombre que especifiques a todas las confirmaciones que realices en tu sistema.
+                    </p>
+                    <p><pre><code>git config --global user.email "tu.email@example.com"</code></pre>
+                        Este comando se utiliza para configurar el correo electrónico global en Git. Al ejecutarlo, Git asignará el correo electrónico que especifiques a todas las confirmaciones que realices en tu sistema.
+                    </p>
+                    <p><pre><code>git config --global user.password "tuContraseña"</code></pre>
+                        Este comando se utiliza para configurar la contraseña global en Git. Sin embargo, es importante destacar que Git no recomienda almacenar contraseñas en texto plano utilizando este comando, ya que puede representar un riesgo de seguridad. En su lugar, se recomienda utilizar métodos de autenticación más seguros, como el uso de claves SSH o tokens de acceso personal para autenticarte con servicios de alojamiento de código como GitHub o GitLab.
+                    </p>
+                    <p><pre><code>git config --global core.autocrlf true</code></pre>
+                        Este comando se utiliza para configurar la conversión automática de finales de línea en Git. Al ejecutarlo, Git convertirá automáticamente los finales de línea a un formato específico según el sistema operativo que estés utilizando.
+                    </p>
+                    <ul>
+                            <li>true: para windows</li>
+                            <li>false: para Linux/Mac</li>
+                    </ul>
+                    <p>
+                        Esto es especialmente útil cuando trabajas en proyectos que involucran a desarrolladores que utilizan diferentes sistemas operativos, ya que ayuda a evitar problemas de compatibilidad relacionados con los finales de línea.
+                    </p>
+                    <p>
+                        <pre><code>git config --global init.defaultBranch main</code></pre>
+                        Este comando se utiliza para configurar el nombre de la rama predeterminada en Git. Al ejecutarlo, Git establecerá el nombre de la rama principal como "main" en lugar de "master", que era el nombre predeterminado en versiones anteriores de Git.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h2 id="versionar">Control de versiones</h2>
+                <article>
+                    <p>
+                        <pre><code>git init</code></pre>
+                        Este comando se utiliza para inicializar un nuevo repositorio de Git en el directorio actual. Al ejecutarlo, Git creará un nuevo repositorio vacío en ese directorio, lo que te permitirá comenzar a rastrear los cambios en tus archivos y realizar confirmaciones.
+                    </p>
+                    <p>
+                        <pre><code>git add archivo</code></pre>
+                        Este comando se utiliza para agregar un archivo al área de preparación de Git. Al ejecutarlo, Git incluirá el archivo especificado en la próxima confirmación. También se puede utilizar el comando: <pre><code>git add .</code></pre> para agregar todos los archivos modificados en el directorio actual al área de preparación.
+                    </p>
+                    <p>
+                        <pre><code>git commit -m "Mensaje de confirmación"</code></pre>
+                        Este comando se utiliza para crear una nueva confirmación en Git. Al ejecutarlo, Git tomará los archivos que has agregado al área de preparación y los guardará como una nueva versión en el historial del repositorio. El mensaje de confirmación que proporcionas con la opción -m debe describir brevemente los cambios que has realizado en esa confirmación para que otros desarrolladores puedan entender fácilmente el propósito de esa versión.
+                    </p>
+                    <p>
+                        <pre><code>git merge nombreRama</code></pre>
+                        Este comando se utiliza para fusionar los cambios de una rama con la rama actual. Al ejecutarlo, Git integrará los commits de la rama especificada en la rama en la que te encuentras.
+                    </p>
+                    <p>
+                        <pre><code>git push</code></pre>
+                        Este comando se utiliza para enviar los cambios locales al repositorio remoto. Al ejecutarlo, Git subirá tus commits al repositorio remoto, lo que permitirá que otros desarrolladores vean y colaboren en tus cambios. Se recomienda ejecutar este comando especificando la rama a la que deseas enviar los cambios y el repositorio remoto, por ejemplo: <pre><code>git push origin main</code></pre>.
+                    </p>
+                    <p>
+                        <pre><code>git pull</code></pre>
+                        Este comando se utiliza para obtener los cambios del repositorio remoto y fusionarlos con la rama actual. Al ejecutarlo, Git descargará los commits más recientes del repositorio remoto y los integrará en tu rama local. Esto es útil para mantener tu rama local actualizada con los cambios realizados por otros desarrolladores en el repositorio remoto.
+                    </p>
+                    <p>
+                        <pre><code>git tag</code></pre>
+                        Este comando se utiliza para listar las etiquetas existentes en el repositorio de Git. Al ejecutarlo, Git mostrará una lista de todas las etiquetas que has creado en tu repositorio, lo que te permite ver fácilmente los puntos específicos en el historial del repositorio que has marcado con etiquetas.
+                    </p>
+                    <p>
+                        <pre><code>git tag -a nombreEtiqueta -m "Mensaje de la etiqueta"</code></pre>
+                        Este comando se utiliza para crear una nueva etiqueta en Git. Al ejecutarlo, Git asignará la etiqueta especificada al commit actual en el historial del repositorio. Las etiquetas son útiles para marcar puntos específicos en el historial del repositorio, como versiones releases.
+                    </p>
+                    <p>
+                        <pre><code>git push origin nombreEtiqueta</code></pre>
+                        Este comando se utiliza para enviar una etiqueta específica al repositorio remoto. Al ejecutarlo, Git subirá la etiqueta que has creado a tu repositorio remoto, lo que permitirá que otros desarrolladores vean y utilicen esa etiqueta en el historial del repositorio.
+                    </p>
+                </article>
+            </section>
+            
+            <section>
+                <h2 id="ramas">Branches o Ramas</h2>
+                <article>
+                    <p>
+                        <pre><code>git branch</code></pre>
+                        Este comando se utiliza para visualizar las ramas creadas en nuestro repositorio local. También nos marca en un color la rama en la que estamos trabajando.
+                    </p>
+                    <p>
+                        <pre><code>git branch nombreRama</code></pre>
+                        Este comando se utiliza para crear una nueva rama (si no existe aún) en nuestro repositorio.
+                    </p>
+                    <p>
+                        <pre><code>git branch -m nombreRama nuevoNombre</code></pre>
+                        Este comando se utiliza para cambiar el nombre de una rama por otro.
+                    </p>
+                    <p>
+                        <pre><code>git branch -d nombreRama</code></pre>
+                        Este comando se utiliza para eliminar una rama existente en nuestro repositorio.
+                    </p>
+                    <p>
+                        <pre><code>git checkout rama</code></pre>
+                        Este comando se utiliza para movernos entre las distintas ramas del repositorio, así como también si en lugar de indicarle una rama, se le indica una versión, esto nos permitirá visualizar los archivos y sus contenidos según la versión especificada.
+                    </p>
+                    <p>
+                        <pre><code>git checkout -b nombreRama</code></pre>
+                        Este comando se utiliza para crear una nueva rama (si aún no existe en nuestro repositorio) y movernos hacia ella con un solo comando
+                    </p>
+
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>© 2026 Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
