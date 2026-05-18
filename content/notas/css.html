@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NP - CSS</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
     <link rel="icon" type="image/x-icon" href="/img/img.portada/notas-icono.svg">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=content_copy" />
     <link rel="stylesheet" href="/css/style.css">
-    <script src="js/copiarCodigo.js" defer></script>
+    <script src="/js/copiarCodigo.js" defer></script>
 </head>
 
 <body>
@@ -48,15 +51,18 @@
         <aside>
             <nav class="menuLateral">
                 <ul>
-                    <li><a href="#HTML">Introducción</a></li>
-                    <li><a href="#index">Index</a></li>
-                    <li><a href="#doctype">Doctype</a></li>
-                    <li><a href="#sintaxis">Sintaxis</a></li>
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#ejemplo">Ejemplo de CSS</a></li>
+                    <li><a href="#tablas">Estilos para tablas</a></li>
+                    <li><a href="#hover">Propiedad Hover</a></li>
+                    <li><a href="#empty">Propiedad empty</a></li>
+                    <li><a href="#menu">Menú de navegación</a></li>
+                    <li><a href="#desplegable">Menú desplegable</a></li>
                 </ul>
             </nav>
         </aside>
         <div class="contenedorPrincipal">
-            <h1>Introducción a CSS</h1>
+            <h1 id="introduccion">Introducción a CSS</h1>
             <section>
                 <h2>¿Qué es CSS?</h2>
                 <article>
@@ -73,8 +79,9 @@
                     </p>
                 </article>
             </section>
+
             <section>
-                <h2>Ejemplo de uso de CSS</h2>
+                <h2 id="ejemplo">Ejemplo de uso de CSS</h2>
                 <article>
                     <p>
                         A continuación se muestra un ejemplo básico de cómo se puede usar CSS para dar estilo a una
@@ -140,8 +147,9 @@
                     </p>
                 </article>
             </section>
+
             <section>
-                <h2 id="TablasCSS">Estilos CSS para tablas</h2>
+                <h2 id="tablas">Estilos CSS para tablas</h2>
                 <article>
                     <p>
                         Para darle estilo a una tabla, se pueden usar las propiedades CSS. A continuación se muestra
@@ -349,8 +357,9 @@
                     </p>
                 </article>
             </section>
+
             <section>
-                <h2>Propiedad hover</h2>
+                <h2 id="hover">Propiedad hover</h2>
                 <article>
                     <p>
                         La propiedad <code>hover</code> se usa para aplicar estilos a un elemento cuando el usuario
@@ -423,7 +432,7 @@
             </section>
 
             <section>
-                <h2>Propiedad empty</h2>
+                <h2 id="empty">Propiedad empty</h2>
                 <article>
                     <p>
                         La propiedad <code>empty</code> se usa para aplicar estilos a un elemento que no tiene
@@ -500,6 +509,579 @@
                     </p>
                 </article>
             </section>
+
+            <section>
+
+                <h2 id="menu">Menú de navegación</h2>
+
+                <article>
+
+                    <p>
+                        Los menús de navegación permiten organizar los enlaces principales de una página web.
+                        Generalmente se utilizan para acceder rápidamente a distintas secciones del sitio.
+                    </p>
+
+                    <p>
+                        En HTML, los menús suelen construirse utilizando listas. Cada opción del menú se representa
+                        con un elemento <code>&lt;li&gt;</code> y los enlaces se crean con la etiqueta
+                        <code>&lt;a&gt;</code>.
+                    </p>
+
+                    <p>
+                        En el siguiente ejemplo se muestra cómo crear un menú horizontal simple utilizando HTML y CSS.
+                    </p>
+
+                    <div class="contenedorCodigo">
+
+                        <div class="tituloCopiarCodigo">
+
+                            <span class="textoCopiar">
+                                ¡Probalo en tu editor copiando el código!
+                            </span>
+
+                            <button id="btnCopiar" onclick="copiarCodigo(this)">
+
+                                <span class="material-symbols-outlined">
+                                    content_copy
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                        <pre><code id="copiarCodigo">&lt;nav class="menu"&gt;
+
+    &lt;ul&gt;
+
+        &lt;li&gt;
+            &lt;a href="#"&gt;Inicio&lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li&gt;
+            &lt;a href="#"&gt;Notas&lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li&gt;
+            &lt;a href="#"&gt;Contacto&lt;/a&gt;
+        &lt;/li&gt;
+
+    &lt;/ul&gt;
+
+&lt;/nav&gt;
+
+&lt;style&gt;
+
+    .menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+
+        background-color: #333;
+    }
+
+    .menu a {
+        display: block;
+
+        padding: 15px 20px;
+
+        color: white;
+
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        background-color: #555;
+    }
+
+&lt;/style&gt;</code></pre>
+
+                    </div>
+
+                    <p>
+                        El resultado del menú anterior se muestra a continuación:
+                    </p>
+
+                    <nav class="menu-simple-ejemplo">
+
+                        <ul>
+
+                            <li>
+                                <a>Inicio</a>
+                            </li>
+
+                            <li>
+                                <a>Notas</a>
+                            </li>
+
+                            <li>
+                                <a>Contacto</a>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                    <style>
+                        .menu-simple-ejemplo ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+
+                            display: flex;
+
+                            background-color: #333;
+
+                            border-radius: 5px;
+                        }
+
+                        .menu-simple-ejemplo a {
+                            display: block;
+
+                            padding: 15px 20px;
+
+                            color: white;
+
+                            text-decoration: none;
+
+                            transition: background-color 0.3s;
+                        }
+
+                        .menu-simple-ejemplo a:hover {
+                            background-color: #555;
+                        }
+                    </style>
+
+                    <h3>Paso 1: Crear la estructura HTML</h3>
+
+                    <p>
+                        La etiqueta <code>&lt;nav&gt;</code> se utiliza para representar una sección de navegación.
+                        Dentro de ella se agrega una lista utilizando <code>&lt;ul&gt;</code>.
+                    </p>
+
+                    <pre><code>&lt;nav class="menu"&gt;
+
+    &lt;ul&gt;
+
+        &lt;li&gt;
+            &lt;a href="#"&gt;Inicio&lt;/a&gt;
+        &lt;/li&gt;
+
+    &lt;/ul&gt;
+
+&lt;/nav&gt;</code></pre>
+
+                    <p>
+                        Cada elemento <code>&lt;li&gt;</code> representa una opción del menú y cada etiqueta
+                        <code>&lt;a&gt;</code> representa un enlace.
+                    </p>
+
+                    <h3>Paso 2: Eliminar estilos automáticos</h3>
+
+                    <p>
+                        Las listas HTML tienen estilos predeterminados aplicados por el navegador, como márgenes,
+                        espacios internos y viñetas.
+                    </p>
+
+                    <p>
+                        Para eliminarlos se utiliza:
+                    </p>
+
+                    <pre><code>.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}</code></pre>
+
+                    <p>
+                        La propiedad <code>list-style: none</code> elimina las viñetas de la lista.
+                    </p>
+
+                    <h3>Paso 3: Convertir el menú en horizontal</h3>
+
+                    <p>
+                        Por defecto, los elementos de una lista se muestran uno debajo del otro.
+                    </p>
+
+                    <p>
+                        Para colocarlos horizontalmente se utiliza:
+                    </p>
+
+                    <pre><code>display: flex;</code></pre>
+
+                    <p>
+                        Esto convierte la lista en un contenedor flexible y coloca automáticamente los elementos
+                        en fila.
+                    </p>
+
+                    <h3>Paso 4: Dar estilo a los enlaces</h3>
+
+                    <p>
+                        Los enlaces del menú pueden personalizarse utilizando CSS.
+                    </p>
+
+                    <pre><code>.menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}</code></pre>
+
+                    <p>
+                        La propiedad <code>padding</code> agrega espacio interno para que el menú sea más cómodo de
+                        usar.
+                    </p>
+
+                    <p>
+                        La propiedad <code>text-decoration: none</code> elimina el subrayado de los enlaces.
+                    </p>
+
+                    <h3>Paso 5: Agregar un efecto hover</h3>
+
+                    <p>
+                        La pseudo-clase <code>:hover</code> permite cambiar el estilo de un elemento cuando el usuario
+                        pasa el cursor sobre él.
+                    </p>
+
+                    <pre><code>.menu a:hover {
+    background-color: #555;
+}</code></pre>
+
+                    <p>
+                        En este caso, el color de fondo cambia cuando el cursor se posiciona sobre una opción del menú.
+                    </p>
+
+                </article>
+
+            </section>
+
+            <section>
+
+                <h2 id="desplegable">Menú desplegable</h2>
+
+                <article>
+
+                    <p>
+                        Una vez creado un menú básico, es posible agregar submenús desplegables para organizar mejor
+                        la navegación.
+                    </p>
+
+                    <p>
+                        Un menú desplegable funciona mostrando nuevas opciones cuando el usuario pasa el cursor sobre
+                        un elemento del menú principal.
+                    </p>
+
+                    <p>
+                        Para crear este efecto se utilizará la misma estructura explicada anteriormente, pero agregando
+                        una lista adicional dentro de una opción del menú.
+                    </p>
+
+                    <div class="contenedorCodigo">
+
+                        <div class="tituloCopiarCodigo">
+
+                            <span class="textoCopiar">
+                                ¡Probalo en tu editor copiando el código!
+                            </span>
+
+                            <button id="btnCopiar" onclick="copiarCodigo(this)">
+
+                                <span class="material-symbols-outlined">
+                                    content_copy
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                        <pre><code id="copiarCodigo">&lt;nav class="menu-desplegable"&gt;
+
+    &lt;ul&gt;
+
+        &lt;li&gt;
+            &lt;a href="#"&gt;Inicio&lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li class="desplegable"&gt;
+
+            &lt;a href="#"&gt;Notas&lt;/a&gt;
+
+            &lt;ul class="submenu"&gt;
+
+                &lt;li&gt;
+                    &lt;a href="#"&gt;HTML&lt;/a&gt;
+                &lt;/li&gt;
+
+                &lt;li&gt;
+                    &lt;a href="#"&gt;CSS&lt;/a&gt;
+                &lt;/li&gt;
+
+                &lt;li&gt;
+                    &lt;a href="#"&gt;Git&lt;/a&gt;
+                &lt;/li&gt;
+
+            &lt;/ul&gt;
+
+        &lt;/li&gt;
+
+        &lt;li&gt;
+            &lt;a href="#"&gt;Contacto&lt;/a&gt;
+        &lt;/li&gt;
+
+    &lt;/ul&gt;
+
+&lt;/nav&gt;
+
+&lt;style&gt;
+
+    .menu-desplegable ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+
+        background-color: #333;
+    }
+
+    .menu-desplegable li {
+        position: relative;
+    }
+
+    .menu-desplegable a {
+        display: block;
+
+        padding: 15px 20px;
+
+        color: white;
+
+        text-decoration: none;
+    }
+
+    .menu-desplegable a:hover {
+        background-color: #555;
+    }
+
+    .submenu {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        min-width: 180px;
+
+        background-color: #444;
+
+        flex-direction: column;
+    }
+
+    .submenu li {
+        width: 100%;
+    }
+
+    .desplegable:hover .submenu {
+        display: flex;
+    }
+
+&lt;/style&gt;</code></pre>
+
+                    </div>
+
+                    <p>
+                        El resultado del menú desplegable anterior se muestra a continuación:
+                    </p>
+
+                    <nav class="menu-desplegable-ejemplo">
+
+                        <ul>
+
+                            <li>
+                                <a>Inicio</a>
+                            </li>
+
+                            <li class="desplegable-ejemplo">
+
+                                <a>Notas</a>
+
+                                <ul class="submenu-ejemplo">
+
+                                    <li>
+                                        <a>HTML</a>
+                                    </li>
+
+                                    <li>
+                                        <a>CSS</a>
+                                    </li>
+
+                                    <li>
+                                        <a>Git</a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <a>Contacto</a>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                    <style>
+                        .menu-desplegable-ejemplo ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+
+                            display: flex;
+
+                            background-color: #333;
+
+                            border-radius: 5px;
+                        }
+
+                        .menu-desplegable-ejemplo li {
+                            position: relative;
+                        }
+
+                        .menu-desplegable-ejemplo a {
+                            display: block;
+
+                            padding: 15px 20px;
+
+                            color: white;
+
+                            text-decoration: none;
+
+                            transition: background-color 0.3s;
+                        }
+
+                        .menu-desplegable-ejemplo a:hover {
+                            background-color: #555;
+                        }
+
+                        .submenu-ejemplo {
+                            display: none !important;
+
+                            position: absolute;
+
+                            top: 100%;
+                            left: 0;
+
+                            min-width: 180px;
+
+                            background-color: #444;
+
+                            flex-direction: column !important;
+
+                            border-radius: 0 0 5px 5px;
+                        }
+
+                        .submenu-ejemplo li {
+                            width: 100%;
+                        }
+
+                        .desplegable-ejemplo:hover .submenu-ejemplo {
+                            display: flex !important;
+                        }
+                    </style>
+
+                    <h3>Paso 1: Crear un submenú</h3>
+
+                    <p>
+                        Dentro de la opción <code>Notas</code> se agrega una nueva lista
+                        <code>&lt;ul&gt;</code>.
+                    </p>
+
+                    <pre><code>&lt;li class="desplegable"&gt;
+
+    &lt;a href="#"&gt;Notas&lt;/a&gt;
+
+    &lt;ul class="submenu"&gt;
+
+        &lt;li&gt;
+            &lt;a href="#"&gt;HTML&lt;/a&gt;
+        &lt;/li&gt;
+
+    &lt;/ul&gt;
+
+&lt;/li&gt;</code></pre>
+
+                    <p>
+                        Esa segunda lista será el contenido desplegable.
+                    </p>
+
+                    <h3>Paso 2: Ocultar el submenú</h3>
+
+                    <p>
+                        El submenú debe permanecer oculto hasta que el usuario interactúe con el menú principal.
+                    </p>
+
+                    <pre><code>.submenu {
+    display: none;
+}</code></pre>
+
+                    <p>
+                        La propiedad <code>display: none</code> hace que el elemento desaparezca completamente.
+                    </p>
+
+                    <h3>Paso 3: Posicionar el submenú</h3>
+
+                    <p>
+                        Para que el submenú aparezca debajo del elemento principal se utiliza posicionamiento CSS.
+                    </p>
+
+                    <pre><code>.menu-desplegable li {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+}</code></pre>
+
+                    <p>
+                        La propiedad <code>position: relative</code> convierte al elemento principal en una referencia
+                        de posición.
+                    </p>
+
+                    <p>
+                        Luego, el submenú utiliza <code>position: absolute</code> para ubicarse respecto a esa
+                        referencia.
+                    </p>
+
+                    <h3>Paso 4: Mostrar el submenú con hover</h3>
+
+                    <p>
+                        Finalmente se utiliza la pseudo-clase <code>:hover</code> para detectar cuándo el usuario
+                        pasa el cursor sobre la opción principal.
+                    </p>
+
+                    <pre><code>.desplegable:hover .submenu {
+    display: flex;
+}</code></pre>
+
+                    <p>
+                        Cuando esto ocurre, el submenú cambia de <code>display: none</code> a
+                        <code>display: flex</code>, haciendo que aparezca automáticamente.
+                    </p>
+
+                    <p>
+                        Gracias a esta técnica es posible crear menús desplegables simples utilizando únicamente CSS.
+                    </p>
+
+                </article>
+
+            </section>
+
+
         </div>
     </main>
     <footer>

@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NP - HTML</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=content_copy" />
     <link rel="stylesheet" href="/css/style.css">
-    <script src="js/copiarCodigo.js" defer></script>
+    <script src="/js/copiarCodigo.js" defer></script>
     <link rel="icon" type="image/x-icon" href="/img/img.portada/notas-icono.svg">
 </head>
 
@@ -50,9 +53,16 @@
             <nav class="menuLateral">
                 <ul>
                     <li><a href="#HTML">Introducción</a></li>
+                    <li><a href="#hvsc">HTML en VsCode</a></li>
                     <li><a href="#etiquetas">Etiquetas</a></li>
-                    <li><a href="#caracteresEspeciales">Caracteres Especiales</a></li>
+                    <li><a href="#elementos">Elementos</a></li>
+                    <li><a href="#encabezados">Encabezados</a></li>
+                    <li><a href="#parrafos">Párrafos</a></li>
+                    <li><a href="#saltolinea">Salto de línea</a></li>
+                    <li><a href="#refseman">Refuerzo semántico</a></li>
+                    <li><a href="#listas">Listas</a></li>
                     <li><a href="#Tablas">Tablas</a></li>
+                    <li><a href="#caracteresEspeciales">Caracteres Especiales</a></li>
                 </ul>
             </nav>
         </aside>
@@ -124,12 +134,10 @@
             </section>
 
             <section>
-                <h2>HTML en VsCode</h2>
+                <h2 class="hvsc">HTML en VsCode</h2>
                 <article>
                     Visual Studio Code nos crea una plantilla básica de forma automática. Para acceder debemos crear
-                    nuestro
-                    archivo con
-                    extensión html y una vez dentro de él tenemos dos opciones:
+                    nuestro archivo con extensión html y una vez dentro de él tenemos dos opciones:
                     - Escribimos un signo de admiración de cierre (!) y presionamos la tecla tab.
                     - Escribimos html:5 y presionamos la tecla tab
                     Ejemplo simple de HTML:
@@ -144,16 +152,15 @@
                         Las etiquetas HTML generalmente se usan en pares una indica la aperturda y la otra el cierre. La
                         etiqueta de apertura tiene el siguiente formato:
                     <pre><code>&lt;nombre_etiqueta_apertura&gt; &lt;\nombre_etiqueta_cierre&gt;</code></pre>
-
-                    El nombre de la etiqueta de cierre es igual al de la etiqueta de apertura pero con una barra (/)
-                    delante.
-                    Por ejemplo, para escribir un párrafo se usa la etiqueta:
-                    <pre><code>&lt;p&gt;</code></pre> y para cerrarlo se usa:
-                    <pre><code>&lt;/p&gt;</code></pre>
-
-                    Algunas etiquetas no necesitan ser cerradas, como por ejemplo:
-                    <pre><code>&lt;img&gt;</code></pre> que se usa para
-                    insertar imágenes.
+                    </p>
+                    <p>
+                        El nombre de la etiqueta de cierre es igual al de la etiqueta de apertura pero con una barra (/)
+                        delante. Por ejemplo, para escribir un párrafo se usa la etiqueta <code>&lt;p&gt;</code> y para
+                        cerrarlo se usa: <code>&lt;/p&gt;</code>.
+                    </p>
+                    <p>
+                        Algunas etiquetas no necesitan ser cerradas, como por ejemplo <code>&lt;img&gt;</code> que se
+                        usa para insertar imágenes.
                     </p>
                     <p>
                         La finalidad de un navegador web es leer las etiquetas HTML. El navegador no mostrará estas
@@ -170,18 +177,109 @@
             </section>
 
             <section>
-                <h2 id="caracteresEspeciales">Caracteres especiales en HTML</h2>
+                <h2 id="elementos">Elementos</h2>
                 <article>
                     <p>
-                        Para escribir código HTML dentro de un documento HTML, es necesario usar las entidades HTML. Las
-                        entidades HTML son secuencias de caracteres que representan caracteres especiales. Por ejemplo,
-                        para
-                        escribir el símbolo menor que (<) se usa la entidad <code>&amp;lt;</code>, para escribir el
-                            símbolo
-                            mayor que (>) se usa la entidad <code>&amp;gt;</code> y para escribir el símbolo ampersand
-                            (&)
-                            se
-                            usa la entidad <code>&amp;amp;</code>.
+                        A continuación se detallan los elementos que se crean en el navegador cuando escribimos una
+                        etiqueta en nuestro archivo <code>.html</code>.
+                        <b>Pero antes</b>, como en todo lenguaje en el que se escriben instrucciones para que las
+                        interprete una maquina, podemos escribir comentarios. Estos comentarios no son ejecutados y nos
+                        permite dejar una documentación o una nota sobre la sección trabajada.
+                    </p>
+                    <p>
+                        En HTML, los comentarios see realizan de la siguiente forma.
+                    <pre><code>&lt!-- Mi comentario en HTML --&gt</code></pre>
+                    </p>
+                    <p>
+                        Volviendo a los elementos, en HTML usualmente encontramos elementos "en bloque" o elementos "en
+                        línea".
+                    </p>
+                    <p>
+                        <strong>Un elemento en línea</strong> solo ocupa el ancho de su contenido.
+                    <div class="html-elm-cont"><img src="/img/img.html/ElementosLineales.webp"
+                            alt="Ejemplo de elementos en línea"></div>
+                    </p>
+                    <p>
+                        Algunos ejemplos de los elementos en línea son, <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;img&gt;</code>.
+                    </p>
+                    <p>
+                        <strong>Un elemento en bloque</strong> ocupa todo el ancho del navegador o de su elemento padre (contenedor),
+                        creando así un "bloque".
+                    <div class="html-elm-cont"><img src="/img/img.html/ElementosBloque.webp"
+                            alt="Ejemplo de elementos en bloque"></div>
+                    </p>
+                    <p>
+                        Algunos ejemplo de elementos en bloque son, <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;section&gt;</code>.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h2 id="parrafos">Párrafos</h2>
+                <article>
+                    <p>
+                        Los párrafos se utilizan para contener el texto y se define en HTML utilizando la etiqueta
+                        <code>&lt;p&gt;</code>.
+                    </p>
+                    <p>
+                        No debería escribirse ningún texto sin estar contenido por una etiqueta HTML, pero tampoco debe
+                        utilizarse cualquier etiqueta. Es importante <strong>considerar el valor semántico de los
+                            elementos</strong>
+                    </p>
+                    <p>
+                        Cada elemento significa algo y eso es importante no solo para los usuarios finales, sino también
+                        para los programas que "leen" las páginas web, como los propios navegadores o los robots de
+                        búsqueda.
+                    </p>
+                    <p>
+                        <strong>Los párrafos, al igual que los enunciados, son elementos de bloque.</strong> Por eso, al
+                        generar un <code>&lt;h1&gt;</code> y luego un <code>&lt;p&gt;</code> el párrafo se ubicará
+                        debajo del enunciado y no al lado.
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <h2 id="encabezados">Encabezados</h2>
+                <article>
+                    <p>
+                        Los encabezados permiten <strong>marcar un contenido de acuerdo a 6 niveles de importancia:
+                            desde <code>&lt;h1&gt;</code> hasta <code>&lt;h6&gt;</code></strong>, donde
+                        <code>&lt;h1&gt;</code> es el encabezado con mayor importancia y <code>&lt;h6&gt;</code> el de
+                        menor importancia.
+                    </p>
+                    <p>
+                        Si bien, podemos ordenarlos de cualquier forma y reutilizarlos cuantas veces queramos,
+                        <strong>es altamente recomendable utilizarlos respetando su orden y utilizar solo un
+                            <code>&lt;h1&gt;</code> por archivo <code>.html</code>.</strong>
+                    </p>
+                    <p>
+                        Para más información sobre los encabezados y como repercuten su utilización en la
+                        <strong>optimización del motor busqueda</strong> o <strong>Search Engine Optimization
+                            (SEO)</strong>, podes visiar este <a
+                            href="https://agenciaseology.com/blog/diccionario-seo/etiquetas-de-encabezado-headings/">blog
+                            en seology</a>.
+                    </p>
+
+                    <p>Ejemplos:
+                    <div class="contenedorCodigo">
+                        <div class="tituloCopiarCodigo">
+                            <span class="textoCopiar">¡Probalo en tu editor copiando el código!</span>
+                            <button id="btnCopiar" onclick="copiarCodigo(this)">
+                                <span class="material-symbols-outlined">
+                                    content_copy
+                                </span>
+                            </button>
+                        </div>
+                        <pre><code id="copiarCodigo">&lt;h1&gt;Título Principal de la página&lt;/h1&gt;
+&lt;h2&gt;Sub Título del H1&lt;/h2&gt;
+&lt;h3&gt;Sub Título del H2&lt;/h3&gt;
+&lt;h4&gt;Sub Título del H3&lt;/h4&gt;
+&lt;h5&gt;Sub Título del H4&lt;/h5&gt;
+&lt;h6&gt;Sub Título del H5&lt;/h6&gt;</code></pre>
+                    </div>
+                    Por lo general no es muy común contener 6 secciones dentro de un mismo título, pero en caso de ser
+                    necesario ya sabés como estructurar los escabezados de tu seccion.
                     </p>
                 </article>
             </section>
@@ -363,6 +461,24 @@
                     </p>
                 </article>
             </section>
+
+            <section>
+                <h2 id="caracteresEspeciales">Caracteres especiales en HTML</h2>
+                <article>
+                    <p>
+                        Para escribir código HTML dentro de un documento HTML, es necesario usar las entidades HTML. Las
+                        entidades HTML son secuencias de caracteres que representan caracteres especiales. Por ejemplo,
+                        para
+                        escribir el símbolo menor que (<) se usa la entidad <code>&amp;lt;</code>, para escribir el
+                            símbolo
+                            mayor que (>) se usa la entidad <code>&amp;gt;</code> y para escribir el símbolo ampersand
+                            (&)
+                            se
+                            usa la entidad <code>&amp;amp;</code>.
+                    </p>
+                </article>
+            </section>
+
         </div>
     </main>
 

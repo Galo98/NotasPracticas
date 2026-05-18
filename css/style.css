@@ -2,11 +2,14 @@
 
 :root {
     /* --color-fondo: #c8d2fc; */
-    --color-fondo: #e2e8fd;
+    --color-fondo: #e2e2fd;
     --color-primario: #0b1c41;
     --color-secundario: #3c4df6;
     --color-texto: #31354b;
     --color-hover: #91a6f6;
+    --font: normal 1rem 'Roboto', sans-serif;
+    --text-shadow: 1px 1px 2px rgba(120, 120, 120, 0.7);
+    --box-shadow: drop-shadow(0px 0px 6px rgba(120, 120, 120, 0.7));
 }
 
 * {
@@ -19,7 +22,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font: 500 1rem 'Montserrat', sans-serif;
+    font: var(--font);
     background-color: var(--color-fondo);
     color: var(--color-texto);
 }
@@ -184,18 +187,23 @@ strong {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 1rem;
     background-color: var(--color-primario);
-    color: white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    color: var(--color-fondo);
+    border-bottom: 1px solid var(--color-fondo);
+}
+
+.textoCopiar{
+    padding: 0.8rem 1rem;
 }
 
 #btnCopiar {
     background: none;
     border: none;
     cursor: pointer;
-    color: white;
+    color: var(--color-fondo);
+    padding: 0.8rem 1rem;
     font-size: 1.2rem;
+    border-left: 1px solid var(--color-fondo);
 }
 
 #btnCopiar:hover {
@@ -278,12 +286,25 @@ td:empty:hover {
 
 img {
     border-radius: 10px;
-    filter: drop-shadow(0px 0px 6px rgba(120, 120, 120, 0.7));
+    filter: var(--box-shadow);
 }
 
 .imgPortada {
     width: 100%;
 }
+
+/* Sección HTML */
+
+.html-elm-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.html-elm-cont img {
+    all: unset;
+}
+
 
 /* Sección de GIT */
 
@@ -394,6 +415,12 @@ footer p {
 
     .menuLateral {
         display: none;
+    }
+
+    /* Estilos sección HTML */
+
+    .html-elm-cont img {
+        width: 100%;
     }
 
     /* Estilos Sección Git */
